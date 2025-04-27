@@ -1,0 +1,970 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000000;
+    color: white;
+    overflow-x: hidden;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+#navbar{
+    /*background-color: #0F172A;*/
+    background-color: rgba(15, 23, 42, 0.9); /* Azul oscuro con transparencia */
+    border-radius: 10px;
+    height: 50px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: end;
+    width: 75%;
+    position: relative;
+    z-index: 2;
+}
+
+h1{
+    font-family: 'Courier New';
+    position: absolute;
+    left: 17%;
+    top: 7px;
+    color: #7db6fb; /* Azul claro */
+    z-index: 3;
+}
+
+#navbar ul{
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-between;
+    width: 400px;
+    position: relative;
+    right: 70px;
+}
+
+#navbar ul li {
+    list-style: none;
+}
+
+#navbar nav div{
+    position: relative;
+    top: -93px;
+    right: -200px;
+    font-size: 25px;
+    visibility: hidden;
+}
+
+#navbar nav div a{
+    color: #93c5fd;
+}
+
+#navbar nav div a:hover{
+    color: #d5e3f5; /* Azul más claro */
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: #93c5fd; /* Azul claro */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+}
+
+#navbar ul li a:hover {
+    color: #d5e3f5; /* Azul más claro */
+}
+
+.nav-icons{
+    visibility: hidden;
+}
+
+#inicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*padding: 50px 130px 0px 130px;*/
+}
+
+#inicio h2{
+    font-size: 70px;
+    font-family: 'Courier New';
+    margin-bottom: 0px;
+    margin-top: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+    z-index: 3;
+}
+
+#inicio p{
+    font-size: 32px;
+    font-family: 'Courier New';
+    margin-top: 7px;
+    padding-left: 50px;
+    padding-right: 50px;
+    z-index: 3;
+}
+
+.btn{
+    background-color: #2563eb; /* Azul más intenso */
+    border-radius: 5px;
+    height: 40px;
+    width: 220px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family:  'Courier New', Courier;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    z-index: 3;
+}
+
+.btn:hover{
+    background-color: #3b82f6; /* Azul más claro */
+    color: #ffffff; /* Blanco */
+}
+
+.banner-container{
+    position: absolute;
+    top: -71px;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.banner-container img{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+    filter: brightness(0.7); /* Oscurece la imagen */
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1)); /* Degradado oscuro */
+    pointer-events: none; /* Permite que los clics pasen a la imagen */
+    z-index: 1;
+}
+
+#tecnologias{
+    margin-top: 300px;
+    padding: 40px 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(180deg, #000000, #1e3a8a, #3b82f6);
+}
+
+.fa-html5{
+    color: orange;
+}
+
+#tecnologias h2{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    color: #60a5fa; /* Azul claro */
+    margin-bottom: 20px;
+    width: 100vw;
+}
+
+.icons{
+    margin-top: 50px;
+    padding: 0px 150px;
+    font-size: 100px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px; 
+}
+
+.tool-set{
+    position: relative;
+    width: 150px;
+    height: 100px;
+}
+
+.icons img{
+    width: 90px;
+    height: auto;
+}
+
+.img-logos{
+    position: relative;
+    top: 10px;
+}
+
+.tool-set .cplus{
+    width: 80px;
+} 
+
+.prog-bar{
+    position: absolute;
+    top: -135px;
+    width: 150px;
+    visibility: hidden;
+}
+
+.tec-am-ic-to-blur{
+    position: absolute;
+    width: 75px;
+    height: 100px;
+    top: 0px;
+    left: 37px;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+#proyectos{
+    padding: 0;
+    padding-top: 70px;
+    background: linear-gradient(360deg, #000000, #1e3a8a, #3b82f6);
+}
+
+.container-proyectos{
+    width: 100vw;
+}
+
+#proyectos h2{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    color: #9cc5f8; /* Azul claro */
+    text-align: center;
+    margin: 0 20px;
+}
+
+.project-grid{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+.card{
+    background-color: #1e3a8aaa;
+    padding-bottom: 15px;
+    border-radius: 10px;
+    display: inline-block;
+    max-width: 200px;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.linealidades{
+    position: absolute;
+    top: -40px;
+    border-radius: 20px;
+    padding: 5px 5px;
+    background: #9cc5f8;
+    z-index: 5;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    color: #006df1;
+}
+
+.card img{
+    width: 100%;
+    /*overflow: hidden;*/
+    border-radius: 10px 10px 0px 0px;
+    height: 250px;
+}
+
+.blur-div{
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    top: 0px;
+    border-radius: 10px 10px 0 0;
+    z-index: 10;
+}
+
+.line-divisor{
+    width: 100%;
+    height: 3px;
+    background-color: #93c5fd;
+    margin-top: -4px;
+}
+
+.card h3{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    padding: 0px 15px;
+}
+
+.card a{
+    text-decoration: none;
+    color: #93c5fd; /* Azul claro */
+    padding: 0px 15px;
+}
+
+.card p{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    padding: 0px 15px 0 15px;
+    text-align:left;
+}
+
+.tec-used{
+    position: absolute;
+    top: 100px;
+    display: flex;
+    width: 200px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    visibility: hidden;
+}
+
+.tec-used-visible{
+    visibility: visible;
+}
+
+.tec-used i{
+    font-size: 30px;
+}
+
+.tec-used img{
+    width: 30px;
+    height: auto;
+}
+
+#sobremi{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#sobremi h2{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #60a5fa; /* Azul claro */
+}
+
+#sobremi p{
+    width: 70%;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: left;
+}
+
+#contacto{
+    margin-top: 100px;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: linear-gradient(180deg, #000000, #1e3a8a, rgba(15, 23, 42, 0.9));
+}
+
+#contacto h2{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #60a5fa; /* Azul claro */
+}
+
+#contacto p{
+    font-family: 'Courier New', Courier;
+    font-size: 20px;
+    text-align: left;
+    margin: 0 50px;
+}
+
+#contacto form{
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 20px;
+    width: 50%;
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #3b82f633; /* Gris oscuro con un toque frío */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+#contacto form input{
+    margin: 0px 0px 20px 0px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+    padding-left: 15px;
+    width: 90%;
+    max-width: 600px;
+    background-color: #1e3a8a;;
+    border-color: #6cacf9;
+    color: white;
+}
+
+#contacto form textarea{
+    margin: 0px 0px 20px 0px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+    padding-left: 15px;
+    width: 90%;
+    max-width: 600px;
+    height: 150px;
+    resize: none;
+    background-color: #1e3a8a;
+    border-color: #6cacf9;
+    border-width: 2px;
+    color: white;
+}
+
+input::placeholder {
+    color: #ffffff; /* Cambia este color al que quieras */
+    opacity: 1;  /* Opcional: hace que el color no sea transparente */
+}
+
+textarea::placeholder {
+    color: #ffffff; /* Cambia este color al que quieras */
+    opacity: 1;  /* Opcional: hace que el color no sea transparente */
+}
+
+.btn-submit{
+    display: flex;
+    justify-content: center;
+    border-bottom: none;
+    outline: none;
+}
+
+#contacto form button{
+    font-family: 'Courier New', Courier, monospace;
+    max-width: 250px;
+    height: 40px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.tel-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: red;
+}
+
+.redes{
+    display: flex;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.redes a{
+    color: #6cacf9; /* Azul claro */
+    font-size: 40px;
+}
+
+.redes a:hover{
+    color: #d5e3f5; /* Azul más claro */
+}
+
+footer{
+    /*background: linear-gradient(180deg, #000000, #1e3a8a, #3b82f6);*/
+    background-color: rgba(15, 23, 42, 0.9); /* Azul oscuro con transparencia */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #93c5fd; /* Azul claro */
+}
+
+@media (max-width: 1100px) {
+    .nav-icons{
+        visibility: visible;
+        position: absolute;
+        top: -50px;
+        font-weight: bold;
+    }
+
+    #navbar ul{
+        display: flex;
+        /* flex-direction: row; */
+        justify-content: space-between;
+        width: 200px;
+        right: 50px;
+    }
+    .nav-no-icons{
+        visibility: hidden;
+    }
+
+    .icons{
+        margin-top: 50px;
+        padding: 0px 150px;
+        font-size: 100px;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 70px; 
+    }
+    
+    .tool-set{
+        position: relative;
+        width: 150px;
+        height: 100px;
+    }
+    
+    .icons img{
+        width: 90px;
+        height: auto;
+    }
+
+    .img-logos{
+        position: relative;
+        top: 5px;
+    }
+    
+    .tool-set .cplus{
+        width: 80px;
+    } 
+    
+    .prog-bar{
+        position: absolute;
+        top: -135px;
+        width: 150px;
+    }
+    
+    .tec-am-ic-to-blur{
+        position: absolute;
+        width: 75px;
+        height: 100px;
+        top: 0px;
+        left: 37px;
+        border-radius: 10px;
+        z-index: 10;
+    }
+
+    .project-grid{
+        margin-top: 100px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 50px;
+    }
+    
+    .card{
+        background-color: #1e3a8aaa;
+        padding-bottom: 15px;
+        border-radius: 10px;
+        display: inline-block;
+        max-width: 200px;
+        position: relative;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    }
+    
+    .card img{
+        width: 100%;
+        /*overflow: hidden;*/
+        border-radius: 10px 10px 0px 0px;
+        height: 250px;
+    }
+    
+    .blur-div{
+        background-color: transparent;
+        position: absolute;
+        width: 100%;
+        height: 250px;
+        top: 0px;
+        border-radius: 10px 10px 0 0;
+        z-index: 10;
+    }
+    
+    .line-divisor{
+        width: 100%;
+        height: 3px;
+        background-color: #93c5fd;
+        margin-top: -4px;
+    }
+    
+    .card h3{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 20px;
+        padding: 0px 15px;
+    }
+    
+    .card a{
+        text-decoration: none;
+        color: #93c5fd; /* Azul claro */
+        padding: 0px 15px;
+    }
+    
+    .card p{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 15px;
+        padding: 0px 15px 0 15px;
+        text-align:left;
+    }
+    
+    .tec-used{
+        position: absolute;
+        top: 100px;
+        display: flex;
+        width: 200px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        visibility: hidden;
+    }
+    
+    .tec-used-visible{
+        visibility: visible;
+    }
+    
+    .tec-used i{
+        font-size: 30px;
+    }
+    
+    .tec-used img{
+        width: 30px;
+        height: auto;
+    }
+}
+  
+/* Para pantallas menores a 480px (móviles en vertical) */
+@media (max-width: 890px) {
+    .nav-icons{
+        visibility: hidden;
+    }
+    #navbar nav div{
+        visibility: visible;
+
+    }
+
+    .icons{
+        margin-top: 50px;
+        padding: 0px 150px;
+        font-size: 70px;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 70px; 
+    }
+    
+    .tool-set{
+        position: relative;
+        width: 80px;
+        height: 100px;
+    }
+    
+    .icons img{
+        width: 60px;
+        height: auto;
+    }
+    
+    .tool-set .cplus{
+        width: 60px;
+    } 
+    
+    .prog-bar{
+        position: absolute;
+        top: -83px;
+        width: 80px;
+    }
+    
+    .tec-am-ic-to-blur{
+        position: absolute;
+        width: 75px;
+        height: 70px;
+        top: 0px;
+        left: 0px;
+        border-radius: 10px;
+        z-index: 10;
+    }
+
+    .project-grid{
+        margin-top: 100px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 50px;
+    }
+    
+    .card{
+        background-color: #1e3a8aaa;
+        padding-bottom: 15px;
+        border-radius: 10px;
+        display: inline-block;
+        max-width: 200px;
+        position: relative;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    }
+    
+    .card img{
+        width: 100%;
+        /*overflow: hidden;*/
+        border-radius: 10px 10px 0px 0px;
+        height: 250px;
+    }
+    
+    .blur-div{
+        background-color: transparent;
+        position: absolute;
+        width: 100%;
+        height: 250px;
+        top: 0px;
+        border-radius: 10px 10px 0 0;
+        z-index: 10;
+    }
+    
+    .line-divisor{
+        width: 100%;
+        height: 3px;
+        background-color: #93c5fd;
+        margin-top: -4px;
+    }
+    
+    .card h3{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 20px;
+        padding: 0px 15px;
+    }
+    
+    .card a{
+        text-decoration: none;
+        color: #93c5fd; /* Azul claro */
+        padding: 0px 15px;
+    }
+    
+    .card p{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 15px;
+        padding: 0px 15px 0 15px;
+        text-align:left;
+    }
+    
+    .tec-used{
+        position: absolute;
+        top: 100px;
+        display: flex;
+        width: 200px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        visibility: hidden;
+    }
+    
+    .tec-used-visible{
+        visibility: visible;
+    }
+    
+    .tec-used i{
+        font-size: 30px;
+    }
+    
+    .tec-used img{
+        width: 30px;
+        height: auto;
+    }
+}
+
+@media (max-width: 680px) {
+    h1{
+        font-size: 20px;
+        top: 23px;
+    }
+
+    #tecnologias{
+        margin-top: 50px;
+    }
+
+    .tool-set{
+        margin: 0px 10px;
+    }
+
+    .icons{
+        margin-top: 50px;
+        padding: 0px 50px;
+        font-size: 50px;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px; 
+    }
+    
+    .tool-set{
+        position: relative;
+        width: 70px;
+        height: 50px;
+    }
+    
+    .icons img{
+        width: 40px;
+        height: auto;
+    }
+    
+    .img-logos{
+        position: relative;
+        top: 0px;
+    }
+
+    .tool-set .cplus{
+        width: 35px;
+    } 
+    
+    .prog-bar{
+        position: absolute;
+        top: -65px;
+        width:70px;
+    }
+    
+    .tec-am-ic-to-blur{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 0px;
+        left: 10px;
+        border-radius: 10px;
+        z-index: 10;
+    }
+
+    .project-grid{
+        margin-top: 100px;
+        display: block;
+    }
+    
+    .card{
+        padding-bottom: 0px;
+        margin-bottom: 20px;
+        border-radius: 0px;
+        display: block;
+        max-width: 100%;
+        position: relative;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+        overflow: hidden;
+    }
+    
+    .card img{
+        width: 200px;
+        height: 250px;
+        border-radius: 0px;
+    }
+    
+    .blur-div{
+        position: absolute;
+        width: 200px;
+        height: 250px;
+        top: 0px;
+        border-radius: 0;
+        z-index: 10;
+    }
+    
+    .line-divisor{
+        width: 3px;
+        height: 250px;
+        position: absolute;
+        top: 4px;
+        left: 200px;
+        background-color: #93c5fd;
+        margin-top: -4px;
+    }
+    
+    .card h3{
+        position: absolute;
+        left: 210px;
+        top: 0px;
+        font-size: 15px;
+    }
+    
+    .card p{
+        position: absolute;
+        left: 210px;
+        top: 70px;
+        margin-top: 20px;
+        font-size: 12px;
+    }
+
+    .card a{
+        position: absolute;
+        left: 210px;
+        top: 220px;
+    }
+    
+    .tec-used{
+        position: absolute;
+        top: 100px;
+        display: flex;
+        width: 200px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        visibility: hidden;
+    }
+    
+    .tec-used-visible{
+        visibility: visible;
+    }
+    
+    .tec-used i{
+        font-size: 30px;
+    }
+    
+    .tec-used img{
+        width: 30px;
+        height: auto;
+    }
+
+    #contacto p{
+        font-size: 15px;
+    }
+
+    #sobremi p{
+        font-size: 15px;
+    }
+
+    #contacto form button{
+        font-size: 12px;
+    }
+
+    #contacto form input{
+        font-size: 15px;
+    }
+
+    #contacto form textarea{
+        font-size: 15px;
+    }
+
+    .redes a{
+        font-size: 20px;
+    }
+
+    .linealidades{
+        top: 180px;
+        left:220px
+    }
+}
+
+/*Animaciones*/
+.animada {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: opacity, transform;
+}
+  
+.animada.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

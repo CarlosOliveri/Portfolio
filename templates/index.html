@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/progressbar.js"></script>
+</head>
+<body>
+    <h1>Carlos Oliveri</h1>
+    <header id="navbar">
+        <nav>
+            <ul class="nav-no-icons">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobremi">Sobre Mi</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contactos</a></li>
+            </ul>
+
+            <ul class="nav-icons">
+                <li><a href="#inicio"><i class="fas fa-home"></i></a></li>
+                <li><a href="#sobremi"><i class="fas fa-user"></i></a></li>
+                <li><a href="#proyectos"><i class="fa-solid fa-code"></i></a></li>
+                <li><a href="#contacto"><i class="fa-sharp fa-solid fa-envelope"></i></a></li>
+            </ul>
+            <div><a href=""><i class="fa-solid fa-bars"></i></a></div>
+
+        </nav>
+    </header>
+
+    <section id="inicio" class="animada">
+        <div class="banner-container animada">
+            <div class="banner-overlay"></div>
+            <img class="banner" src="{{ url_for('static', filename='images/banner_2_minor.webp')}}" alt="imagen">
+        </div>
+        <h2><spam style="color: #22D3EE;">Hola!</spam> Soy Carlos</h2>
+        <H2>Desarrollador | Ingeniero Mecatrónico</H2>
+        <a href="#proyectos" class="btn">Ver Proyectos</a>
+    </section>
+
+    <section id="tecnologias">
+        <h2 class="animada">Tecnologías que domino</h2>
+        <div class="icons">
+            <div class="tool-set">
+                <i class="fab fa-brands fa-html5 animada" style="color: #ffa33b;"></i>
+                <div class="prog-bar" id="html-bar"></div>
+                <div class="tec-am-ic-to-blur"></div>
+            </div>
+
+            <div class="tool-set">
+                <i class="fab fa-css3-alt animada" style="color: #3b79ff;"></i>
+                <div class="prog-bar" id="css-bar"></div>
+                <div class="tec-am-ic-to-blur"></div>
+            </div>
+
+            <div class="tool-set">
+                <i class="fab fa-js-square animada" style="color: #f2ff3b;"></i>
+                <div class="prog-bar" id="js-bar"></div>
+                <div class="tec-am-ic-to-blur"></div>
+            </div>
+
+            <div class="tool-set">
+                <div class="img-logos"><img class="fab animada" src="{{ url_for('static', filename='images/python-logo-only.png')}}" alt="logo Python"></div>
+                <div class="prog-bar correccion-progbar" id="python-bar"></div>
+                <div class="tec-am-ic-to-blur"></div>
+            </div>
+
+            <div class="tool-set">
+                <div class="img-logos"><img class="fab animada cplus" src="{{ url_for('static', filename='images/C++-Logo.png')}}" alt="logo C++"></div>
+                <div class="prog-bar cplus-progbar" id="cplus-bar"></div>
+                <div class="tec-am-ic-to-blur"></div>
+            </div>
+
+            <div class="tool-set">
+                <i class="fab fa-react animada" style="color: #3bceff;"></i>
+                <div class="prog-bar" id="react-bar"></div>
+                <div class="tec-am-ic-to-blur"></div>
+            </div>
+
+            <div class="tool-set">
+                <i class="fas fa-microchip animada"></i> <!-- Automatización -->
+                <div class="prog-bar" id="micro-bar"></div>
+                <div class="tec-am-ic-to-blur"></div>
+            </div>
+
+            <div class="tool-set">
+                <div class="img-logos"><img class="fab arduino animada" src="{{ url_for('static', filename='images/arduino-logo.png')}}" alt="logo arduino"></div>
+                <div class="prog-bar correccion-progbar" id="arduino-bar"></div>
+                <div class="tec-am-ic-to-blur"></div>
+            </div>
+
+            <div class="tool-set">
+                <i class="fab fa-github animada"></i>
+                <div class="prog-bar" id="git-bar"></div>
+                <div class="tec-am-ic-to-blur"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="proyectos">
+        <div class="container-proyectos animada">
+            <h2 class="animada">Proyectos destacados</h2>
+            <div class="project-grid">
+                <article class="card animada">
+                    <div class="linealidades">
+                        Fullstack | App
+                    </div>
+                    <img class="img-project" src="{{ url_for('static', filename='images/ecg-app.JPG')}}" alt="Image">
+                    <div class="blur-div"></div>
+                    <div class="tec-used">
+                        <img src="{{ url_for('static', filename='images/python-logo-only.png')}}" alt="logo Python">
+                        <i class="fab fa-react" style="color: #3bceff;"></i>
+                        <i class="fab fa-js-square" style="color: #f2ff3b;"></i>
+                        <i class="fab fa-css3-alt" style="color: #3b79ff;"></i>
+                        <i class="fas fa-microchip"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div class="line-divisor"></div>
+                    <h3>ECG-App</h3>
+                    <p>Plataforma de adquisición de ECG en tiempo real.</p>
+                    <a href="https://github.com/CarlosOliveri/Ecg-App.git"><i class="fab fa-github"></i> Ver en GitHub ></a>
+                </article>
+                <article class="card animada">
+                    <div class="linealidades">
+                        Robótica
+                    </div>
+                    <img class="img-project" src="{{ url_for('static', filename='images/micro-ros.jpg')}}" alt="Image">
+                    <div class="blur-div"></div>
+                    <div class="tec-used">
+                        <img src="{{ url_for('static', filename='images/python-logo-only.png')}}" alt="logo Python">
+                        <i class="fas fa-microchip"></i>
+                        <i class="fa-brands fa-linux" style="color: #eff1f4;"></i>
+                        <i class="fab fa-github animada"></i>
+                    </div>
+                    <div class="line-divisor"></div>
+                    <h3>Seguidor de trayectoria</h3>
+                    <p>Algoritmo de visión artificial con micro-ROS.</p>
+                    <a href="https://github.com/CarlosOliveri/ROS_micro-ROS.git"><i class="fab fa-github"></i> Ver en GitHub ></a>
+                </article>
+                <article class="card animada">
+                    <div class="linealidades">
+                        Robótica
+                    </div>
+                    <img class="img-project" src="{{ url_for('static', filename='images/thor-arm.JPG')}}" alt="Image">
+                    <div class="blur-div"></div>
+                    <div class="tec-used">
+                        <img src="{{ url_for('static', filename='images/python-logo-only.png')}}" alt="logo Python">
+                        <i class="fas fa-microchip"></i>
+                        <i class="fab fa-github animada"></i>
+                    </div>
+                    <div class="line-divisor"></div>
+                    <h3>Control de brazo robótico 6-GDL</h3>
+                    <p>Control de robot de 6 ejes usando ROS.d</p>
+                    <a href="https://github.com/CarlosOliveri/Control_Brazo_Robotico.git"><i class="fab fa-github"></i> Ver en GitHub ></a>
+                </article>
+                <article class="card animada">
+                    <div class="linealidades">
+                        algo
+                    </div>
+                    <img class="img-project" src="{{ url_for('static', filename='images/proyecto.png')}}" alt="Image">
+                    <div class="blur-div"></div>
+                    <div class="tec-used">
+                        <img src="{{ url_for('static', filename='images/python-logo-only.png')}}" alt="logo Python">
+                        <i class="fas fa-microchip"></i>
+                        <i class="fa-brands fa-linux" style="color: #b1c3e1;"></i>
+                        <i class="fab fa-github animada"></i>
+                    </div>
+                    <div class="line-divisor"></div>
+                    <h3>Nombre del Proyecto</h3>
+                    <p>Descripcion del proyecto</p>
+                    <a href=""><i class="fab fa-github"></i> Ver en GitHub ></a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobremi" class="animada">
+        <h2>Sobre Mí</h2>
+        <p class="animada">
+            Apasionado por la programación y la automatización. amplio conocimiento en PLCs, microcontroladores (Arduino, ESP32, Raspberry Pi) y desarrollo web con React, React Native y Django.
+        </p>
+        <p class="animada">
+            He trabajado con Python, JavaScript, HTML, CSS y Git.
+        </p>
+        <p class="animada">
+            Proactivo, adaptable y orientado a resolver problemas. Aprendo rápido y me involucro al máximo en cada proyecto.
+        </p>
+    </section>
+    
+
+    <section id="contacto" class="animada">
+        <h2>Contacto</h2>
+        <p>Puede dejarme un mensaje y me pondre en contacto con usted</p>
+        <p>O si lo prefiere, puede contactarme a traves de mis redes sociales</p>
+        <form id="myForm" method="POST">
+            <textarea class="animada" id="mensaje" name="mensaje" placeholder="Su mensaje" required></textarea>
+            <input class="animada" id="nombre" name="nombre" type="text" placeholder="Su nombre" required>
+            <input class="animada" id="email" name="email" type="email" placeholder="Su E-mail" required>
+            <input class="animada" type="tel" id="numero" name="numero" placeholder="Su teléfono">
+
+            <div class="btn-submit animada"><button type="submit" onclick="">Enviar Mensaje ></button></div>
+        </form>
+        
+        <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+        <div class="redes animada">
+            <a href="https://shorturl.at/yMkoP"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://github.com/CarlosOliveri"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/carlos-oliveri-martinez-b1a342203"><i class="fab fa-linkedin"></i></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
+            <a href="mailto:coliveri@fiuna.edu.py"><i class="fas fa-envelope"></i></a>
+        </div>
+    </section>
+    <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+</body>
+
+<footer>
+    <p>© 2025 Carlos Oliveri</p>
+</footer>
+</html>
