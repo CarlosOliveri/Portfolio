@@ -31,7 +31,7 @@ h1{
     position: absolute;
     left: 17%;
     top: 7px;
-    color: #7db6fb; /* Azul claro */
+    color: #ffffff; /* Azul claro */
     z-index: 3;
 }
 
@@ -46,6 +46,7 @@ h1{
 
 #navbar ul li {
     list-style: none;
+    font-weight: bold;
 }
 
 #navbar nav div{
@@ -57,7 +58,7 @@ h1{
 }
 
 #navbar nav div a{
-    color: #93c5fd;
+    color: #58bff4;
 }
 
 #navbar nav div a:hover{
@@ -90,13 +91,13 @@ h1{
     font-size: 70px;
     font-family: 'Courier New';
     margin-bottom: 0px;
-    margin-top: 100px;
+    margin-top: 130px;
     padding-left: 50px;
     padding-right: 50px;
     z-index: 3;
 }
 
-#inicio p{
+#inicio h3{
     font-size: 32px;
     font-family: 'Courier New';
     margin-top: 7px;
@@ -105,25 +106,61 @@ h1{
     z-index: 3;
 }
 
+.btn-cv{
+    background-color: #58c0f425; /* Azul más intenso */
+    border-radius: 25px;
+    border-style: solid;
+    border-color: #58bff4;
+    height: 40px;
+    width: 170px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family:  'Courier New', Courier;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    box-shadow: white 0px 0px 10px 0px;
+    z-index: 3;
+}
+
+.btn-cv:hover{
+    background-color: #5382ce5e; /* Azul más claro */
+    color: #ffffff; /* Blanco */
+    box-shadow: white 0px 0px 20px 0px;
+    transition: all 0.3s ease;
+    transform: scale(1.05); /* Aumenta el tamaño al pasar el mouse */
+}
+
+.btn-cv i{
+    margin-right: 7px;
+}
+
 .btn{
-    background-color: #2563eb; /* Azul más intenso */
-    border-radius: 5px;
+    background-color: #58bff4; /* Azul más intenso */
+    border-radius: 25px;
     height: 40px;
     width: 220px;
     text-decoration: none;
     font-size: 20px;
     font-family:  'Courier New', Courier;
-    color: white;
+    color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 100px;
+    
     z-index: 3;
 }
 
 .btn:hover{
-    background-color: #3b82f6; /* Azul más claro */
-    color: #ffffff; /* Blanco */
+    background-color: #ffffff; /* Azul más claro */
+    color: #58bff4; /* Blanco */
+}
+
+.banner{
+    opacity: 0.7;
 }
 
 .banner-container{
@@ -153,14 +190,14 @@ h1{
 }
 
 #tecnologias{
-    margin-top: 300px;
+    margin-top: 200px;
     padding: 40px 0;
     width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background: linear-gradient(180deg, #000000, #1e3a8a, #3b82f6);
+    background: linear-gradient(180deg, #000000, #001331, #001331);
 }
 
 .fa-html5{
@@ -222,10 +259,33 @@ h1{
     z-index: 10;
 }
 
+.experiencia{
+    padding-top: 150px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #001331
+}
+
+.experiencia h2{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    color: #9cc5f8; /* Azul claro */
+    margin-bottom: 20px;
+}
+
+.experiencia p{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    text-align: center;
+    width: 70%;
+}
+
 #proyectos{
     padding: 0;
-    padding-top: 70px;
-    background: linear-gradient(360deg, #000000, #1e3a8a, #3b82f6);
+    padding-top: 150px;
+    background: linear-gradient(360deg, #000000, #001331, #001331);
 }
 
 .container-proyectos{
@@ -242,33 +302,32 @@ h1{
 
 .project-grid{
     margin-top: 100px;
+    padding: 0px 200px;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap:wrap;
     justify-content: center;
     gap: 50px;
 }
 
 .card{
-    background-color: #1e3a8aaa;
+    background-color: #021c45;
     padding-bottom: 15px;
     border-radius: 10px;
-    display: inline-block;
     max-width: 200px;
     position: relative;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
 
 .linealidades{
-    position: absolute;
-    top: -40px;
     border-radius: 20px;
     padding: 5px 5px;
     background: #9cc5f8;
     z-index: 5;
     font-family: 'Courier New', Courier, monospace;
     font-size: 12px;
-    color: #006df1;
+    color: #033792;
+    margin-left: 15px;
 }
 
 .card img{
@@ -295,6 +354,18 @@ h1{
     margin-top: -4px;
 }
 
+.card-title{
+    height: 80px;
+}
+
+.card-body{
+    height: 100px;
+}
+
+.card-body p{
+    margin: 15px 0px;
+}
+
 .card h3{
     font-family: 'Courier New', Courier, monospace;
     font-size: 20px;
@@ -304,7 +375,23 @@ h1{
 .card a{
     text-decoration: none;
     color: #93c5fd; /* Azul claro */
+    font-size: 15px;
+    background-color: #050b1e;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 30px;
+    width: 140px;
+    font-family:  'Courier New', Courier;
+    margin-left: 15px;
     padding: 0px 15px;
+
+}
+
+.card a:hover{
+    background-color: #0f2343; /* Azul más claro */
+    color: #ffffff; /* Blanco */
 }
 
 .card p{
@@ -366,7 +453,7 @@ h1{
     flex-direction: column;
     align-items: center;
     width: 100%;
-    background: linear-gradient(180deg, #000000, #1e3a8a, rgba(15, 23, 42, 0.9));
+    background: linear-gradient(180deg, #000000, #001331, rgba(15, 23, 42, 0.9));
 }
 
 #contacto h2{
@@ -392,8 +479,9 @@ h1{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #3b82f633; /* Gris oscuro con un toque frío */
+    background-color: #021c4555;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    box-shadow: black 0px 5px 10px 0px;
 }
 
 #contacto form input{
@@ -405,7 +493,7 @@ h1{
     padding-left: 15px;
     width: 90%;
     max-width: 600px;
-    background-color: #1e3a8a;;
+    background-color: #021c45;
     border-color: #6cacf9;
     color: white;
 }
@@ -421,7 +509,7 @@ h1{
     max-width: 600px;
     height: 150px;
     resize: none;
-    background-color: #1e3a8a;
+    background-color: #021c45;
     border-color: #6cacf9;
     border-width: 2px;
     color: white;
@@ -458,7 +546,14 @@ textarea::placeholder {
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
     transition: all 0.3s ease;
     cursor: pointer;
+    padding: 0px 20px;
 }
+
+#contacto form button:hover{
+    background-color: #ffffff; /* Azul más claro */
+    color: #58bff4; /* Blanco */
+}
+
 .tel-container{
     display: flex;
     justify-content: center;
@@ -565,7 +660,6 @@ footer{
     }
     
     .card{
-        background-color: #1e3a8aaa;
         padding-bottom: 15px;
         border-radius: 10px;
         display: inline-block;
@@ -703,7 +797,6 @@ footer{
     }
     
     .card{
-        background-color: #1e3a8aaa;
         padding-bottom: 15px;
         border-radius: 10px;
         display: inline-block;

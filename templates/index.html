@@ -35,8 +35,9 @@
             <div class="banner-overlay"></div>
             <img class="banner" src="{{ url_for('static', filename='images/banner_2_minor.webp')}}" alt="imagen">
         </div>
-        <h2><spam style="color: #22D3EE;">Hola!</spam> Soy Carlos</h2>
-        <H2>Desarrollador | Ingeniero Mecatrónico</H2>
+        <h2><span style="color: #58bff4;">Hola!</span> Soy Carlos</h2>
+        <h3>Desarrollador | Ingeniero Mecatrónico</h3>
+        <a href="" class="btn-cv"><i class="fa-solid fa-file"></i>Resumen</a>
         <a href="#proyectos" class="btn">Ver Proyectos</a>
     </section>
 
@@ -99,14 +100,16 @@
         </div>
     </section>
 
+    <Section class="experiencia">
+        <h2>Experiencia</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eligendi a praesentium ex officia voluptatem facilis eaque tempora fugiat harum animi, quisquam facere cumque possimus. Corporis quae fugit excepturi distinctio.</p>
+    </Section>
+
     <section id="proyectos">
         <div class="container-proyectos animada">
             <h2 class="animada">Proyectos destacados</h2>
             <div class="project-grid">
                 <article class="card animada">
-                    <div class="linealidades">
-                        Fullstack | App
-                    </div>
                     <img class="img-project" src="{{ url_for('static', filename='images/ecg-app.JPG')}}" alt="Image">
                     <div class="blur-div"></div>
                     <div class="tec-used">
@@ -118,47 +121,74 @@
                         <i class="fab fa-github"></i>
                     </div>
                     <div class="line-divisor"></div>
-                    <h3>ECG-App</h3>
-                    <p>Plataforma de adquisición de ECG en tiempo real.</p>
-                    <a href="https://github.com/CarlosOliveri/Ecg-App.git"><i class="fab fa-github"></i> Ver en GitHub ></a>
+                    <div class="card-title">
+                        <h3>Aplicación Cardio-Pro</h3>
+                    </div>
+                    <div class="card-body">
+                        <span class="linealidades">
+                            Fullstack | App
+                        </span>
+                        <span class="linealidades">
+                            IoT
+                        </span>
+                        <p>Plataforma de adquisición de ECG en tiempo real.</p>
+                    </div>
+                    <div class="card-footer">    
+                        <a href="https://github.com/CarlosOliveri/Ecg-App.git"><i class="fab fa-github"></i> Ver en GitHub</a>
+                    </div>
                 </article>
                 <article class="card animada">
-                    <div class="linealidades">
-                        Robótica
-                    </div>
                     <img class="img-project" src="{{ url_for('static', filename='images/micro-ros.jpg')}}" alt="Image">
                     <div class="blur-div"></div>
                     <div class="tec-used">
                         <img src="{{ url_for('static', filename='images/python-logo-only.png')}}" alt="logo Python">
-                        <i class="fas fa-microchip"></i>
+                        <i class="fas fa-robot"></i>
                         <i class="fa-brands fa-linux" style="color: #eff1f4;"></i>
                         <i class="fab fa-github animada"></i>
                     </div>
                     <div class="line-divisor"></div>
-                    <h3>Seguidor de trayectoria</h3>
-                    <p>Algoritmo de visión artificial con micro-ROS.</p>
-                    <a href="https://github.com/CarlosOliveri/ROS_micro-ROS.git"><i class="fab fa-github"></i> Ver en GitHub ></a>
-                </article>
-                <article class="card animada">
-                    <div class="linealidades">
-                        Robótica
+                    <div class="card-title">
+                        <h3>Seguidor de trayectoria</h3>
                     </div>
+                    <div class="card-body">
+                        <span class="linealidades">
+                            Robótica
+                        </span>
+                        <span class="linealidades">
+                            IoT
+                        </span>
+                        <span class="linealidades">
+                            IA
+                        </span>
+                        <p>Algoritmo de visión artificial con micro-ROS.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://github.com/CarlosOliveri/ROS_micro-ROS.git"><i class="fab fa-github"></i> Ver en GitHub </a>
+                    </div>
+                    </article>
+                <article class="card animada">
                     <img class="img-project" src="{{ url_for('static', filename='images/thor-arm.JPG')}}" alt="Image">
                     <div class="blur-div"></div>
                     <div class="tec-used">
                         <img src="{{ url_for('static', filename='images/python-logo-only.png')}}" alt="logo Python">
-                        <i class="fas fa-microchip"></i>
+                        <i class="fas fa-robot"></i>
                         <i class="fab fa-github animada"></i>
                     </div>
                     <div class="line-divisor"></div>
-                    <h3>Control de brazo robótico 6-GDL</h3>
-                    <p>Control de robot de 6 ejes usando ROS.d</p>
-                    <a href="https://github.com/CarlosOliveri/Control_Brazo_Robotico.git"><i class="fab fa-github"></i> Ver en GitHub ></a>
+                    <div class="card-title">
+                        <h3>Control de brazo robótico 6-GDL</h3>
+                    </div>
+                    <div class="card-body">
+                        <span class="linealidades">
+                            Robótica
+                        </span>
+                        <p>Control de robot de 6 GDL</p>
+                    </div>
+                    <div card-footer>
+                        <a href="https://github.com/CarlosOliveri/Control_Brazo_Robotico.git"><i class="fab fa-github"></i> Ver en GitHub</a>
+                    </div>
                 </article>
                 <article class="card animada">
-                    <div class="linealidades">
-                        algo
-                    </div>
                     <img class="img-project" src="{{ url_for('static', filename='images/proyecto.png')}}" alt="Image">
                     <div class="blur-div"></div>
                     <div class="tec-used">
@@ -168,9 +198,18 @@
                         <i class="fab fa-github animada"></i>
                     </div>
                     <div class="line-divisor"></div>
-                    <h3>Nombre del Proyecto</h3>
-                    <p>Descripcion del proyecto</p>
-                    <a href=""><i class="fab fa-github"></i> Ver en GitHub ></a>
+                    <div class="card-title">
+                        <h3>Nombre del Proyecto</h3>
+                    </div>
+                    <div class="card-body">
+                        <span class="linealidades">
+                            algo
+                        </span>
+                        <p>Descripcion del proyecto</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href=""><i class="fab fa-github"></i> Ver en GitHub</a>
+                    </div>
                 </article>
             </div>
         </div>
@@ -217,6 +256,6 @@
 </body>
 
 <footer>
-    <p>© 2025 Carlos Oliveri</p>
+    <p>2025 Carlos Oliveri</p>
 </footer>
 </html>
