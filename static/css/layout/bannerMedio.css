@@ -1,0 +1,101 @@
+/*Banner de mobile App*/
+.banner-medio-mobile{
+    width: 100%;
+    height: 40rem;
+    background-image: url("../../images/banner_mobil_2.png");
+
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.blur-banner-medio{
+    position: absolute;
+    width: 100%;
+    height: 40rem;
+    background-color: rgba(0, 0, 0, 0.673);
+    /*backdrop-filter: blur(5px);*/
+}
+
+.banner-medio-mobile__contenedor {
+    position: relative;
+    height: 100%;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-medio-mobile__contenedor h2{
+    color: white;
+    margin: 2rem 0;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 4rem;
+    font-family: PT Sans, sans-serif;
+    color: rgb(250, 251, 251);
+}
+
+.banner-medio-mobile__contenedor p{
+    width: 50%;
+    margin: 1rem 0;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(250, 251, 251);
+}
+
+.highlight{
+    color: #58bff4;
+    font-weight: bold;
+}
+
+/*Banner de Automatizacion*/
+
+.banner-medio-automatismo{
+    width: 100%;
+    height: 40rem;
+    background-image: url("../../images/banner_mobil_2.png");
+
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.blur-banner-medio{
+    position: absolute;
+    width: 100%;
+    height: 40rem;
+    background-color: rgba(0, 0, 0, 0.673);
+    /*backdrop-filter: blur(5px);*/
+}
+
+.banner-medio-automatismo__contenedor {
+    position: relative;
+    height: 100%;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-medio-automatismo__contenedor h2{
+    color: white;
+    margin: 2rem 0;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 4rem;
+    font-family: PT Sans, sans-serif;
+    color: rgb(250, 251, 251);
+}
+
+.banner-medio-automatismo__contenedor p{
+    width: 50%;
+    margin: 1rem 0;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(250, 251, 251);
+}

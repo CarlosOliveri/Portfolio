@@ -3,112 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Elio Sebastián</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base/normalize.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base/utilidades.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base/variables.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base/globales.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/layout/header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/layout/tecnologias.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/layout/servicios.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/layout/proyectos.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/layout/sobreMi.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/layout/contacto.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/layout/footer.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/layout/bannerMedio.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <script src="https://cdn.jsdelivr.net/npm/progressbar.js"></script>
 </head>
 <body>
-    <h1>Carlos Oliveri</h1>
-    <header id="navbar">
+    <header id="navbar" class="header">
+        <h1>Elio Sebastián</h1>
         <nav>
             <ul class="nav-no-icons">
-                <li><a href="#inicio">Inicio</a></li>
+                <!-- <li><a href="#inicio">Inicio</a></li> -->
                 <li><a href="#sobremi">Sobre Mi</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
                 <li><a href="#contacto">Contactos</a></li>
             </ul>
 
             <ul class="nav-icons">
-                <li><a href="#inicio"><i class="fas fa-home"></i></a></li>
+                <!-- <li><a href="#inicio"><i class="fas fa-home"></i></a></li> -->
                 <li><a href="#sobremi"><i class="fas fa-user"></i></a></li>
                 <li><a href="#proyectos"><i class="fa-solid fa-code"></i></a></li>
                 <li><a href="#contacto"><i class="fa-sharp fa-solid fa-envelope"></i></a></li>
             </ul>
-            <div><a href=""><i class="fa-solid fa-bars"></i></a></div>
 
+            <div><a href=""><i class="fa-solid fa-bars"></i></a></div>
         </nav>
     </header>
 
-    <section id="inicio" class="animada">
-        <div class="banner-container animada">
-            <div class="banner-overlay"></div>
-            <img class="banner" src="{{ url_for('static', filename='images/banner_2_minor.webp')}}" alt="imagen">
-        </div>
-        <h2><span style="color: #58bff4;">Hola!</span> Soy Carlos</h2>
-        <h3>Desarrollador | Ingeniero Mecatrónico</h3>
+    <div id="inicio" class="animada">
+        <div class="blur-banner"></div>
+        <h2><span style="color: #58bff4;">Hola!</span> Soy Elio</h2>
+        <h3>Desarrollador | Full-Stack</h3>
         <a href="" class="btn-cv"><i class="fa-solid fa-file"></i>Resumen</a>
         <a href="#proyectos" class="btn">Ver Proyectos</a>
-    </section>
+    </div>
 
-    <section id="tecnologias">
-        <h2 class="animada">Tecnologías que domino</h2>
-        <div class="icons">
-            <div class="tool-set">
-                <i class="fab fa-brands fa-html5 animada" style="color: #ffa33b;"></i>
-                <div class="prog-bar" id="html-bar"></div>
-                <div class="tec-am-ic-to-blur"></div>
+    <section id="servicios" class="servicios">
+        <!-- <h2 class="animada">Servicios</h2> -->
+        <div class="mis-servicios contenedor animada">
+            <div class="servicio">
+                <img src="{{ url_for('static', filename='images/icono_pc.png') }}" alt="app web">
+                <h2>Desarrollo de aplicaciones web</h2>
+                <p>Diseñemos tu idea juntos y potencia tu presencia en la web</p>
             </div>
-
-            <div class="tool-set">
-                <i class="fab fa-css3-alt animada" style="color: #3b79ff;"></i>
-                <div class="prog-bar" id="css-bar"></div>
-                <div class="tec-am-ic-to-blur"></div>
+            <div class="servicio">
+                <img src="{{ url_for('static', filename='images/icono_mobil.png') }}" alt="app mobile">
+                <h2>Aplicaciones móviles</h2>
+                <p>¿Tenes una idea? Hablemos y hagámosla realidad</p>
             </div>
-
-            <div class="tool-set">
-                <i class="fab fa-js-square animada" style="color: #f2ff3b;"></i>
-                <div class="prog-bar" id="js-bar"></div>
-                <div class="tec-am-ic-to-blur"></div>
+            <div class="servicio">
+                <img src="{{ url_for('static', filename='images/icono_landing.png') }}" alt="Landing Pages">
+                <h2>Desarrollo de Landing Pages</h2>
+                <p>Incrementa la tasa de conversión de tus visitantes</p>
             </div>
-
-            <div class="tool-set">
-                <div class="img-logos"><img class="fab animada" src="{{ url_for('static', filename='images/python-logo-only.png')}}" alt="logo Python"></div>
-                <div class="prog-bar correccion-progbar" id="python-bar"></div>
-                <div class="tec-am-ic-to-blur"></div>
-            </div>
-
-            <div class="tool-set">
-                <div class="img-logos"><img class="fab animada cplus" src="{{ url_for('static', filename='images/C++-Logo.png')}}" alt="logo C++"></div>
-                <div class="prog-bar cplus-progbar" id="cplus-bar"></div>
-                <div class="tec-am-ic-to-blur"></div>
-            </div>
-
-            <div class="tool-set">
-                <i class="fab fa-react animada" style="color: #3bceff;"></i>
-                <div class="prog-bar" id="react-bar"></div>
-                <div class="tec-am-ic-to-blur"></div>
-            </div>
-
-            <div class="tool-set">
-                <i class="fas fa-microchip animada"></i> <!-- Automatización -->
-                <div class="prog-bar" id="micro-bar"></div>
-                <div class="tec-am-ic-to-blur"></div>
-            </div>
-
-            <div class="tool-set">
-                <div class="img-logos"><img class="fab arduino animada" src="{{ url_for('static', filename='images/arduino-logo.png')}}" alt="logo arduino"></div>
-                <div class="prog-bar correccion-progbar" id="arduino-bar"></div>
-                <div class="tec-am-ic-to-blur"></div>
-            </div>
-
-            <div class="tool-set">
-                <i class="fab fa-github animada"></i>
-                <div class="prog-bar" id="git-bar"></div>
-                <div class="tec-am-ic-to-blur"></div>
+            <div class="servicio">
+                <img src="{{ url_for('static', filename='images/icono_scadas.png') }}" alt="scadas">
+                <h2>Desarrollo de SCADAS</h2>
+                <p>Control y adquisicion de datos para tus sistemas</p>
             </div>
         </div>
     </section>
 
-    <Section class="experiencia">
-        <h2>Experiencia</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eligendi a praesentium ex officia voluptatem facilis eaque tempora fugiat harum animi, quisquam facere cumque possimus. Corporis quae fugit excepturi distinctio.</p>
-    </Section>
-
-    <section id="proyectos">
+    <section id="proyectos" class="proyectos">
+        <h2 class="animada">Proyectos destacados</h2>
         <div class="container-proyectos animada">
-            <h2 class="animada">Proyectos destacados</h2>
-            <div class="project-grid">
+            <div class="project-grid contenedor">
                 <article class="card animada">
                     <img class="img-project" src="{{ url_for('static', filename='images/ecg-app.JPG')}}" alt="Image">
                     <div class="blur-div"></div>
@@ -121,20 +92,22 @@
                         <i class="fab fa-github"></i>
                     </div>
                     <div class="line-divisor"></div>
-                    <div class="card-title">
-                        <h3>Aplicación Cardio-Pro</h3>
-                    </div>
-                    <div class="card-body">
-                        <span class="linealidades">
-                            Fullstack | App
-                        </span>
-                        <span class="linealidades">
-                            IoT
-                        </span>
+                    <div class="card-content">
+                        <div class="card-title">
+                            <h3>Aplicación Cardio-Pro</h3>
+                        </div>
+                        <div class="card-body">
+                            <span class="linealidades">
+                                Fullstack | App
+                            </span>
+                            <span class="linealidades">
+                                IoT
+                            </span>
+                        </div>
                         <p>Plataforma de adquisición de ECG en tiempo real.</p>
-                    </div>
-                    <div class="card-footer">    
-                        <a href="https://github.com/CarlosOliveri/Ecg-App.git"><i class="fab fa-github"></i> Ver en GitHub</a>
+                        <div class="card-footer">    
+                            <a href="https://github.com/CarlosOliveri/Ecg-App.git"><i class="fab fa-github"></i> Ver en GitHub</a>
+                        </div>
                     </div>
                 </article>
                 <article class="card animada">
@@ -147,25 +120,27 @@
                         <i class="fab fa-github animada"></i>
                     </div>
                     <div class="line-divisor"></div>
-                    <div class="card-title">
-                        <h3>Seguidor de trayectoria</h3>
-                    </div>
-                    <div class="card-body">
-                        <span class="linealidades">
-                            Robótica
-                        </span>
-                        <span class="linealidades">
-                            IoT
-                        </span>
-                        <span class="linealidades">
-                            IA
-                        </span>
+                    <div class="card-content">
+                        <div class="card-title">
+                            <h3>Seguidor de trayectoria</h3>
+                        </div>
+                        <div class="card-body">
+                            <span class="linealidades">
+                                Robótica
+                            </span>
+                            <span class="linealidades">
+                                IoT
+                            </span>
+                            <span class="linealidades">
+                                IA
+                            </span>
+                        </div>
                         <p>Algoritmo de visión artificial con micro-ROS.</p>
+                        <div class="card-footer">
+                            <a href="https://github.com/CarlosOliveri/ROS_micro-ROS.git"><i class="fab fa-github"></i> Ver en GitHub </a>
+                        </div>
                     </div>
-                    <div class="card-footer">
-                        <a href="https://github.com/CarlosOliveri/ROS_micro-ROS.git"><i class="fab fa-github"></i> Ver en GitHub </a>
-                    </div>
-                    </article>
+                </article>
                 <article class="card animada">
                     <img class="img-project" src="{{ url_for('static', filename='images/thor-arm.JPG')}}" alt="Image">
                     <div class="blur-div"></div>
@@ -175,17 +150,19 @@
                         <i class="fab fa-github animada"></i>
                     </div>
                     <div class="line-divisor"></div>
-                    <div class="card-title">
-                        <h3>Control de brazo robótico 6-GDL</h3>
-                    </div>
-                    <div class="card-body">
-                        <span class="linealidades">
-                            Robótica
-                        </span>
+                    <div class="card-content">
+                        <div class="card-title">
+                            <h3>Control de brazo robótico 6-GDL</h3>
+                        </div>
+                        <div class="card-body">
+                            <span class="linealidades">
+                                Robótica
+                            </span>
+                        </div>
                         <p>Control de robot de 6 GDL</p>
-                    </div>
-                    <div card-footer>
-                        <a href="https://github.com/CarlosOliveri/Control_Brazo_Robotico.git"><i class="fab fa-github"></i> Ver en GitHub</a>
+                        <div card-footer>
+                            <a href="https://github.com/CarlosOliveri/Control_Brazo_Robotico.git"><i class="fab fa-github"></i> Ver en GitHub</a>
+                        </div>
                     </div>
                 </article>
                 <article class="card animada">
@@ -198,42 +175,120 @@
                         <i class="fab fa-github animada"></i>
                     </div>
                     <div class="line-divisor"></div>
-                    <div class="card-title">
-                        <h3>Nombre del Proyecto</h3>
-                    </div>
-                    <div class="card-body">
-                        <span class="linealidades">
-                            algo
-                        </span>
+                    <div class="card-content">
+                        <div class="card-title">
+                            <h3>Nombre del Proyecto</h3>
+                        </div>
+                        <div class="card-body">
+                            <span class="linealidades">
+                                algo
+                            </span>
+                        </div>
                         <p>Descripcion del proyecto</p>
-                    </div>
-                    <div class="card-footer">
-                        <a href=""><i class="fab fa-github"></i> Ver en GitHub</a>
+                        <div class="card-footer">
+                            <a href=""><i class="fab fa-github"></i> Ver en GitHub</a>
+                        </div>
                     </div>
                 </article>
             </div>
         </div>
     </section>
 
-    <section id="sobremi" class="animada">
-        <h2>Sobre Mí</h2>
+    <section id="banner-medio-automatismo" class="banner-medio-automatismo">
+        <div class="blur-banner-medio"></div>
+        <div class="banner-medio-automatismo__contenedor contenedor">
+            <h2>Hagamos realidad tus ideas</h2>
+            <p>Si tenés un proyecto o una idea, yo puedo ayudarte a convertirla en algo tangible</p>
+            <p>¡Construyámos juntos!</p>
+            <a href="#contacto" class="btn">Hablemos</a>
+        </div>    
+    </section>
+
+    <section id="tecnologias">
+        <h2 class="animada">Tecnologías</h2>
+        <div class="icons">
+            <div class="tool-set">
+                <i class="fab fa-brands fa-html5 animada" style="color: #ffa33b;"></i>
+                <!-- <div class="prog-bar" id="html-bar"></div> -->
+                <div class="tec-am-ic-to-blur"></div>
+            </div>
+
+            <div class="tool-set">
+                <i class="fab fa-css3-alt animada" style="color: #3b79ff;"></i>
+                <!-- <div class="prog-bar" id="css-bar"></div> -->
+                <div class="tec-am-ic-to-blur"></div>
+            </div>
+
+            <div class="tool-set">
+                <i class="fab fa-js-square animada" style="color: #f2ff3b;"></i>
+                <!-- <div class="prog-bar" id="js-bar"></div> -->
+                <div class="tec-am-ic-to-blur"></div>
+            </div>
+
+            <div class="tool-set">
+                <i class="fab fa-react animada" style="color: #3bceff;"></i>
+                <!-- <div class="prog-bar" id="react-bar"></div> -->
+                <div class="tec-am-ic-to-blur"></div>
+            </div>
+
+            <div class="tool-set">
+                <i class="fa-brands fa-php animada"></i>
+                <!-- <div class="prog-bar" id="micro-bar"></div> -->
+                <div class="tec-am-ic-to-blur"></div>
+            </div>
+
+            <div class="tool-set">
+                <div class="img-logos"><img class="fab animada" src="{{ url_for('static', filename='images/python-logo-only.png')}}" alt="logo Python"></div>
+                <!-- <div class="prog-bar correccion-progbar" id="python-bar"></div> -->
+                <div class="tec-am-ic-to-blur"></div>
+            </div>
+
+            <div class="tool-set">
+                <div class="img-logos"><img class="fab animada cplus" src="{{ url_for('static', filename='images/C++-Logo.png')}}" alt="logo C++"></div>
+                <!-- <div class="prog-bar cplus-progbar" id="cplus-bar"></div> -->
+                <div class="tec-am-ic-to-blur"></div>
+            </div>
+
+            <div class="tool-set">
+                <div class="img-logos"><img class="fab arduino animada" src="{{ url_for('static', filename='images/arduino-logo.png')}}" alt="logo arduino"></div>
+                <!-- <div class="prog-bar correccion-progbar" id="arduino-bar"></div> -->
+                <div class="tec-am-ic-to-blur"></div>
+            </div>
+
+            <div class="tool-set">
+                <i class="fab fa-github animada"></i>
+                <!-- <div class="prog-bar" id="git-bar"></div> -->
+                <div class="tec-am-ic-to-blur"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="banner-medio-mobile" class="banner-medio-mobile">
+        <div class="blur-banner-medio"></div>
+        <div class="banner-medio-mobile__contenedor contenedor">
+            <h2>Hagamos realidad tus ideas</h2>
+            <p>Si tenés un proyecto o una idea, yo puedo ayudarte a convertirla en algo tangible</p>
+            <p>¡Construyámos juntos!</p>
+            <a href="#contacto" class="btn">Hablemos</a>
+        </div>    
+    </section>
+
+    <section id="sobremi" class="sobremi">
+        <h2 class="animada">Sobre Mí</h2>
         <p class="animada">
-            Apasionado por la programación y la automatización. amplio conocimiento en PLCs, microcontroladores (Arduino, ESP32, Raspberry Pi) y desarrollo web con React, React Native y Django.
+            Soy desarrollador especializado en crear aplicaciones web y móviles que ayudan a empresas y emprendedores a transformar sus ideas en soluciones digitales
         </p>
         <p class="animada">
-            He trabajado con Python, JavaScript, HTML, CSS y Git.
-        </p>
-        <p class="animada">
-            Proactivo, adaptable y orientado a resolver problemas. Aprendo rápido y me involucro al máximo en cada proyecto.
+           Combino tecnologías modernas para construir productos robustos y atractivos. Me enfoco en entender las necesidades del cliente y ofrecer resultados que generen valor real
         </p>
     </section>
     
 
-    <section id="contacto" class="animada">
-        <h2>Contacto</h2>
-        <p>Puede dejarme un mensaje y me pondre en contacto con usted</p>
-        <p>O si lo prefiere, puede contactarme a traves de mis redes sociales</p>
-        <form id="myForm" method="POST">
+    <section id="contacto" class="contacto">
+        <h2 class="animada">Contacto</h2>
+        <p class="animada">Puede dejarme un mensaje y me pondre en contacto</p>
+        <p class="animada">También puede contactarme a traves de mis redes sociales</p>
+        <form id="myForm" method="POST" class="animada">
             <textarea class="animada" id="mensaje" name="mensaje" placeholder="Su mensaje" required></textarea>
             <input class="animada" id="nombre" name="nombre" type="text" placeholder="Su nombre" required>
             <input class="animada" id="email" name="email" type="email" placeholder="Su E-mail" required>
@@ -253,9 +308,9 @@
         </div>
     </section>
     <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+    <footer>
+        <p>2025 Elio Sebastián</p>
+    </footer>
 </body>
 
-<footer>
-    <p>2025 Carlos Oliveri</p>
-</footer>
 </html>

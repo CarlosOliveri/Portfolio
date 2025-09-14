@@ -1,0 +1,138 @@
+/*Proyectos*/
+.proyectos{
+    padding: 0;
+    background: linear-gradient(360deg, #000000, #001331, #001331);
+    margin-bottom: 10rem;
+}
+
+.container-proyectos{
+    width: 100vw;
+}
+
+.proyectos h2{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    color: #9cc5f8; /* Azul claro */
+    text-align: center;
+    margin: 0 20px;
+}
+
+.project-grid{
+    margin-top: 100px;
+    padding: 0px 50px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 2rem;
+}
+
+.card{
+    background-color: #021c45;
+    padding-bottom: 15px;
+    border-radius: 10px;
+    max-width: 200px;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    margin: 0 auto;
+}
+
+.card-content{
+    padding:  0 1.5rem;
+}
+
+.linealidades{
+    border-radius: 20px;
+    padding: 5px 5px;
+    background: #9cc5f8;
+    z-index: 5;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    color: #033792;
+}
+
+.card img{
+    width: 100%;
+    /*overflow: hidden;*/
+    border-radius: 10px 10px 0px 0px;
+    height: 250px;
+}
+
+.blur-div{
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    top: 0px;
+    border-radius: 10px 10px 0 0;
+    z-index: 10;
+}
+
+.line-divisor{
+    width: 100%;
+    height: 3px;
+    background-color: #93c5fd;
+    margin-top: -4px;
+}
+
+.card-title{
+    height: 80px;
+}
+
+.card-body{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.card h3{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+.card a{
+    text-decoration: none;
+    color: #93c5fd; /* Azul claro */
+    font-size: 15px;
+    background-color: #050b1e;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 30px;
+    font-family:  'Courier New', Courier;
+
+}
+
+.card a:hover{
+    background-color: #0f2343; /* Azul más claro */
+    color: #ffffff; /* Blanco */
+}
+
+.card p{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    text-align:left;
+}
+
+.tec-used{
+    position: absolute;
+    top: 100px;
+    display: flex;
+    width: 200px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    visibility: hidden;
+}
+
+.tec-used-visible{
+    visibility: visible;
+}
+
+.tec-used i{
+    font-size: 30px;
+}
+
+.tec-used img{
+    width: 30px;
+    height: auto;
+}

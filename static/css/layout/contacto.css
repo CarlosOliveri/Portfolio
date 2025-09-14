@@ -1,0 +1,130 @@
+/*Contacto*/
+#contacto{
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    /*background: linear-gradient(180deg, #000000, #001331, rgba(15, 23, 42, 0.9));*/
+    background: linear-gradient(180deg, #001331, #001331, #000000);
+}
+
+#contacto h2{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #60a5fa; /* Azul claro */
+}
+
+#contacto p{
+    font-family: 'Open sans', sans-serif;
+    font-size: 20px;
+    text-align: left;
+    margin: 0 50px;
+}
+
+#contacto form{
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #021c4555;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    box-shadow: black 0px 5px 10px 0px;
+}
+
+#contacto form input{
+    margin: 0px 0px 20px 0px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+    padding-left: 15px;
+    width: 90%;
+    max-width: 600px;
+    background-color: #021c45;
+    border-color: #6cacf9;
+    color: white;
+}
+
+#contacto form textarea{
+    margin: 0px 0px 20px 0px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+    padding-left: 15px;
+    width: 90%;
+    max-width: 600px;
+    height: 150px;
+    resize: none;
+    background-color: #021c45;
+    border-color: #6cacf9;
+    border-width: 2px;
+    color: white;
+}
+
+input::placeholder {
+    color: #ffffff; /* Cambia este color al que quieras */
+    opacity: 1;  /* Opcional: hace que el color no sea transparente */
+}
+
+textarea::placeholder {
+    color: #ffffff; /* Cambia este color al que quieras */
+    opacity: 1;  /* Opcional: hace que el color no sea transparente */
+}
+
+.btn-submit{
+    display: flex;
+    justify-content: center;
+    border-bottom: none;
+    outline: none;
+}
+
+#contacto form button{
+    font-family: 'Courier New', Courier, monospace;
+    max-width: 250px;
+    height: 40px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    padding: 0px 20px;
+}
+
+#contacto form button:hover{
+    background-color: #ffffff; /* Azul más claro */
+    color: #58bff4; /* Blanco */
+}
+
+.tel-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: red;
+}
+
+.redes{
+    display: flex;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.redes a{
+    color: #6cacf9; /* Azul claro */
+    font-size: 40px;
+}
+
+.redes a:hover{
+    color: #d5e3f5; /* Azul más claro */
+}
