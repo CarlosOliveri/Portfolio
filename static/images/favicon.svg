@@ -1,0 +1,11 @@
+<!-- <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+  <rect width="100%" height="100%" fill="#65d9ebff"/>
+  <text x="50%" y="55%" font-size="18" font-family="Arial, sans-serif" fill="#d841d0ff" text-anchor="middle" alignment-baseline="middle">&lt;/&gt;</text>
+</svg>
+ -->
+ <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+  <!-- fondo gris oscuro -->
+  <rect width="100%" height="100%" fill="#432ffaff"/>
+  <!-- texto blanco -->
+  <text x="50%" y="55%" font-size="14" font-weight="bold" font-family="Arial, sans-serif" fill="#65d9ebff" text-anchor="middle" alignment-baseline="middle">&lt;/C&gt;</text>
+</svg>

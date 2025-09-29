@@ -1,0 +1,32 @@
+@use 'variables' as v;
+
+.seccion {
+    margin-top: calc(v.$separacion / 2);
+    margin-bottom: calc(v.$separacion / 2);
+}
+.contenido-centrado {
+    max-width: 80rem;
+}
+
+.alinear-derecha{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.w-100{
+    width: 100%;
+}
+
+/*Animaciones*/
+.animada {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: opacity, transform;
+}
+  
+.animada.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+

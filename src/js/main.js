@@ -23,13 +23,16 @@ document.getElementById("myForm").addEventListener("submit",function (event){
         },
     }).then(response => {
         if (response.ok) {
+            document.getElementById("nombre").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("numero").value = "";
+			document.getElementById("mensaje").value = "";
             alert("Mensaje enviado correctamente");
         }else{
             alert("Error al enviar el mensaje, por favor intente de nuevo más tarde, o contáctenos por otro medio.");
         }
         return response.json();
-    }
-    );
+    });
 })
 
 const cardElements = document.getElementsByClassName("blur-div")
@@ -74,6 +77,13 @@ const observer = new IntersectionObserver((entradas) => {
 });
 
 elementosAnimados.forEach(el => observer.observe(el));
+
+
+/*Admin Crear Proyectos*/
+document.getElementById("formProyectos").addEventListener("submit", function(event){
+  event.preventDefault();
+  console.log("enviado");
+})
 
 //contraseña de encriptacion de url
 //w:#nilointentes@4u70

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>{{proyecto.titulo}}</h2>
+    <div class="contenedor contenido-centrado">
+        <img src="{{ url_for('static', filename='uploads/' + proyecto.imagen)}}" alt="Imagen del proyecto">
+
+        <div>
+            {% for line in proyecto.linealidades %}
+                <span class="linealidades">
+                    {{line}}
+                </span>
+            {% endfor %}
+        </div>
+        <p>{{proyecto.descripcion}}</p>
+        <div class="enlace">
+            <a href="{{proyecto.enlace}}">Ver Pagina Web</a>
+        </div>
+
+    </div>
+    
+{% endblock %}

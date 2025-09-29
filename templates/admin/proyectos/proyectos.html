@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../static/images/favicon.svg" type="image/svg+xml">
+    <title>Admin - Proyectos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base/normalize.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base/utilidades.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base/variables.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base/botones.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base/globales.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/layout/header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin/proyectos.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header id="navbar" class="header">
+        <h1>Carlos Oliveri</h1>
+        <nav>
+            <ul class="nav-no-icons">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="#sobremi">Sobre Mi</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contactos</a></li>
+            </ul>
+
+            <ul class="nav-icons">
+                <li><a href="#inicio"><i class="fas fa-home"></i></a></li>
+                <li><a href="#sobremi"><i class="fas fa-user"></i></a></li>
+                <li><a href="#proyectos"><i class="fa-solid fa-code"></i></a></li>
+                <li><a href="#contacto"><i class="fa-sharp fa-solid fa-envelope"></i></a></li>
+            </ul>
+
+            <div><a href=""><i class="fa-solid fa-bars"></i></a></div>
+        </nav>
+    </header>
+
+    <main class="contenido-principal">
+        <h2>Proyectos</h2>
+        {% if created == "ok" %}
+            <p class="success">Nuevo Proyecto Guardado Correctamente</p>
+        {% endif %}
+        {% if deleted == "ok" %}
+            <p class="success">Proyecto Eliminado Correctamente</p>
+        {% endif %}
+        {% if upgrade == "ok" %}
+            <p class="success">Proyecto Actualizado Correctamente</p>
+        {% endif %}
+        <div class="tabla-proyectos-container">
+            <table aria-describedby="tablaUsuarios">
+                
+                <thead>
+                    <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Titulo</th>
+                    <th scope="col">Imagen</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Cliente</th>
+                    <th scope="col">Enlace</th>
+                    <th scope="col" class="actions">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for u in proyectos %}
+                        <tr>
+                            <td>{{u.id}}</td>
+                            <td>{{u.titulo}}</td>
+                            <td>
+                                <img src="{{ url_for('static', filename='uploads/' + u.imagen) }}" alt="Imagen del Proyecto">
+                            </td>
+                            <td>{{u.descripcion}}</td>
+                            <td>{{u.cliente}}</td>
+                            <td>{{u.enlace}}</td>
+                            <td class="actions">
+                                <div class="actions-butons">
+                                    <form action="/admin/proyectos/actualizar" method="POST">
+                                        <input type="hidden" name="id" value="{{ u.id }}">
+                                        <input type="submit" class="btn-admin edit" value="Editar">
+                                    </form>
+                                    <form action="/admin/proyectos/delete" method="POST" class="form-eliminar">
+                                        <input type="hidden" name="id" value="{{ u.id }}">
+                                        <input type="submit" class="btn-admin delete" value="Eliminar">
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    <!-- más filas -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="contenedor-boton">
+            <a href="./admin/proyectos/nuevo" class="btn-admin nuevo">Nuevo Proyecto</a>
+        </div>
+    </main>
+
+</body>
+</html>
