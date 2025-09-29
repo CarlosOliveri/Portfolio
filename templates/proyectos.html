@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section id="proyectos" class="proyectos">
+        <h2>Proyectos Realizados</h2>
+        <div class="container-proyectos">
+            <div class="project-grid contenedor">
+                {% for u in proyectos %}
+                    <article class="card">
+                        <img class="img-project" src="{{ url_for('static', filename='uploads/' + u.imagen)}}" alt="Image">
+                        <div class="line-divisor"></div>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <h3>{{u.titulo}}</h3>
+                            </div>
+                            <div class="card-body">
+                                {% for line in u.linealidades %}
+                                    <span class="linealidades">
+                                        {{line}}
+                                    </span>
+                                {% endfor %}
+                            </div>
+                            <p>{{u.descripcion}}</p>
+                            <div class="card-footer">
+                                <a href="/proyecto?id={{u.id}}"> > Ver Proyecto</a>
+                            </div>
+                        </div>
+                    </article>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    </div>
+{% endblock %}

@@ -1,3 +1,5 @@
 .venv
+package-lock.json
 node_modules
-/node_modules
+contacto.db
+__pycache__

@@ -1,0 +1,212 @@
+@forward "base";
+@forward "layout";
+@forward 'admin';
+
+@media (max-width: 1100px) {
+    .nav-icons{
+        visibility: visible;
+        position: absolute;
+        top: 0px;
+        font-weight: bold;
+    }
+
+    #navbar ul{
+        display: flex;
+        /* flex-direction: row; */
+        justify-content: space-between;
+        width: 200px;
+        right: 50px;
+    }
+    .nav-no-icons{
+        visibility: hidden;
+    }
+
+    .icons{
+        margin-top: 50px;
+        padding: 0px 150px;
+        font-size: 100px;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 70px; 
+    }
+    
+    .tool-set{
+        position: relative;
+        width: 150px;
+        height: 100px;
+    }
+    
+    .icons img{
+        width: 90px;
+        height: auto;
+    }
+
+    .img-logos{
+        position: relative;
+        top: 5px;
+    }
+    
+    .tool-set .cplus{
+        width: 80px;
+    } 
+    
+    .prog-bar{
+        position: absolute;
+        top: -135px;
+        width: 150px;
+    }
+    
+    .tec-am-ic-to-blur{
+        position: absolute;
+        width: 6rem;
+        height: 5rem;
+        top: 7rem;
+        left: 4.5rem;
+        border-radius: 10px;
+        z-index: 10;
+    }
+}
+  
+/* Para pantallas menores a 480px (móviles en vertical) */
+@media (max-width: 890px) {
+    .nav-icons{
+        visibility: hidden;
+    }
+    
+
+    .icons{
+        margin-top: 50px;
+        padding: 0px 150px;
+        font-size: 70px;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 70px; 
+    }
+    
+    .tool-set{
+        position: relative;
+        width: 80px;
+        height: 100px;
+    }
+    
+    .icons img{
+        width: 60px;
+        height: auto;
+    }
+    
+    .tool-set .cplus{
+        width: 60px;
+    } 
+    
+    .prog-bar{
+        position: absolute;
+        top: -83px;
+        width: 80px;
+    }
+    
+    .tec-am-ic-to-blur{
+        position: absolute;
+        width: 2.5rem;
+        height: 3rem;
+        top: 2.7rem;
+        left: 2.3rem;
+        border-radius: 10px;
+        z-index: 10;
+    }
+
+    
+}
+
+@media (max-width: 680px) {
+    h1{
+        font-size: 20px;
+        top: 23px;
+    }
+
+    #tecnologias{
+        margin-top: 50px;
+    }
+
+    .tool-set{
+        margin: 0px 10px;
+    }
+
+    .icons{
+        margin-top: 50px;
+        padding: 0px 50px;
+        font-size: 50px;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px; 
+    }
+    
+    .tool-set{
+        position: relative;
+        width: 70px;
+        height: 50px;
+    }
+    
+    .icons img{
+        width: 40px;
+        height: auto;
+    }
+    
+    .img-logos{
+        position: relative;
+        top: 0px;
+    }
+
+    .tool-set .cplus{
+        width: 35px;
+    } 
+    
+    .prog-bar{
+        position: absolute;
+        top: -65px;
+        width:70px;
+    }
+    
+    .tec-am-ic-to-blur{
+        position: absolute;
+        width: 2.5rem;
+        height: 3rem;
+        top: 2.7rem;
+        left: 2.3rem;
+        border-radius: 10px;
+    }
+
+    
+
+    #contacto p{
+        font-size: 15px;
+    }
+
+    #sobremi p{
+        font-size: 15px;
+    }
+
+    #contacto form button{
+        font-size: 12px;
+    }
+
+    #contacto form input{
+        font-size: 15px;
+    }
+
+    #contacto form textarea{
+        font-size: 15px;
+    }
+
+    .redes a{
+        font-size: 20px;
+    }
+
+    .linealidades{
+        top: 180px;
+        left:220px
+    }
+}
+

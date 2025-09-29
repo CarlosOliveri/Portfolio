@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../static/images/favicon.svg" type="image/svg+xml">
+    <title>Admin - Proyectos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base/normalize.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base/utilidades.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base/variables.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base/botones.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base/globales.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/layout/header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin/proyectos.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin/crear.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header id="navbar" class="header">
+        <h1>Carlos Oliveri</h1>
+        <nav>
+            <ul class="nav-no-icons">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="#sobremi">Sobre Mi</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contactos</a></li>
+            </ul>
+
+            <ul class="nav-icons">
+                <li><a href="#inicio"><i class="fas fa-home"></i></a></li>
+                <li><a href="#sobremi"><i class="fas fa-user"></i></a></li>
+                <li><a href="#proyectos"><i class="fa-solid fa-code"></i></a></li>
+                <li><a href="#contacto"><i class="fa-sharp fa-solid fa-envelope"></i></a></li>
+            </ul>
+
+            <div><a href=""><i class="fa-solid fa-bars"></i></a></div>
+        </nav>
+    </header>
+
+    <main class="contenido-principal contenedor">
+        <h2>Crear Proyecto</h2>
+        <form id="formProyectos" action="" method="POST" enctype="multipart/form-data" class="formulario contenido-centrado">
+            <div class="campo">
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" name="titulo" required>
+            </div>
+            <div class="campo">
+                <label for="imagen">Imagen:</label>
+                <input type="file" id="imagen" name="imagen" accept="image/*" required>
+                
+            </div>
+            <div class="campo">
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" required></textarea>
+            </div>
+            <div class="campo">
+                <label for="linealidades">Linealidades:</label>
+                <input type="text" id="linealidades" name="linealidades" required>
+            </div>
+            <div class="campo">
+                <label for="tecnologias">Tecnologías:</label>
+                <input type="text" id="tecnologias" name="tecnologias" required>
+            </div>
+            <div class="campo">
+                <label for="enlace">Enlace:</label>
+                <input type="url" id="enlace" name="enlace" >
+            </div>
+            <div class="acciones">
+                <a href="/admin" class="btn-admin btn-cancelar">Cancelar</a>
+                <button type="submit" class="btn-admin btn-crear">Crear Proyecto</button>
+            </div>
+        </form>
+    </main>
+
+    
+</body>
+</html>

@@ -1,0 +1,416 @@
+@use '../base/mixins' as m;
+
+/*Proyectos*/
+.proyectos{
+    padding-bottom: 10rem;
+    /* background: linear-gradient(360deg, #000000, #001331, #001331); */
+    background-color: #001331;
+    margin-top: 10rem;
+    
+}
+
+.container-proyectos{
+    width: 100%
+}
+
+.proyectos h2{
+    
+    color: #9cc5f8; /* Azul claro */
+    
+}
+
+.project-grid{
+    display: block;
+}
+
+.card{
+    background-color: #021c45;
+    background-color: #1C2541;
+    margin: 2rem 0;
+    display: flex;
+    max-width: 100%;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card-content{
+    padding:  0 1.5rem;
+}
+
+.linealidades{
+    border-radius: 20px;
+    padding: 5px 5px;
+    margin-right: .5rem;
+    background: #9cc5f8;
+    z-index: 5;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    color: #033792;
+}
+
+.card img{
+    overflow: hidden;
+    border-radius: 0;
+    height: 250px;
+    max-width: 20rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+.btn-a-proyectos{
+    text-align: right;
+    padding: 5rem 5rem 0 5rem;
+
+}
+
+@media (min-width: 680px){
+    .card img{
+        border-radius: 10px 10px 0px 0px;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+}
+
+.blur-div{
+    background-color: transparent;
+    position: absolute;
+    width: 20rem;
+    height: 250px;
+    top: 0px;
+    border-radius: 10px 10px 0 0;
+    z-index: 10;
+}
+
+.line-divisor{
+    width: .5rem;
+    height: 25rem;
+    background-color: #93c5fd;
+    margin-top: 0px;
+}
+
+/* .card-title{
+    
+} */
+
+.card-body{
+    display: flex;
+    justify-content: start;
+}
+
+
+.card h3{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+}
+
+.card a{
+    text-decoration: none;
+    color: #93c5fd; /* Azul claro */
+    font-size: 15px;
+    background-color: #050b1e;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 30px;
+    font-family:  'Courier New', Courier;
+
+}
+
+.card a:hover{
+    background-color: #0f2343; /* Azul más claro */
+    color: #ffffff; /* Blanco */
+}
+
+.card p{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    text-align:left;
+}
+
+.tec-used{
+    position: absolute;
+    top: 100px;
+    display: flex;
+    width: 200px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    visibility: hidden;
+}
+
+.tec-used-visible{
+    visibility: visible;
+}
+
+.tec-used i{
+    font-size: 30px;
+}
+
+.tec-used img{
+    width: 30px;
+    height: auto;
+}
+
+@media (min-width: 954px){
+    .project-grid{
+        margin-top: 5rem;
+        padding: 0px 50px;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        column-gap: 2rem;
+    }
+    
+    .card{
+        display: inline-block;
+        margin: 2rem auto;
+        background-color: #021c45;
+        padding-bottom: 15px;
+        border-radius: 10px;
+        position: relative;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    }
+    
+    .card img{
+        border-radius: 10px 10px 0px 0px;
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .blur-div{
+        background-color: transparent;
+        position: absolute;
+        width: 100%;
+        height: 250px;
+        top: 0px;
+        border-radius: 10px 10px 0 0;
+        z-index: 10;
+    }
+    
+    .line-divisor{
+        width: 100%;
+        height: 3px;
+        background-color: #93c5fd;
+        margin-top: 0;
+    }
+
+    
+    
+    .card h3{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 20px;
+    }
+    
+    .card a{
+        text-decoration: none;
+        color: #93c5fd; 
+    }
+    
+    .card p{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 15px;
+        text-align:left;
+    }
+    
+    .tec-used{
+        position: absolute;
+        top: 100px;
+        display: flex;
+        width: 200px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        visibility: hidden;
+    }
+    
+    .tec-used-visible{
+        visibility: visible;
+    }
+    
+    .tec-used i{
+        font-size: 30px;
+    }
+    
+    .tec-used img{
+        width: 30px;
+        height: auto;
+    } 
+}
+
+@media (min-width: 680px) and (max-width: 954px){
+    .project-grid{
+        margin-top: 5rem;
+        padding: 0px 50px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 2rem;
+    }
+    
+    .card{
+        margin: 2rem auto;
+        padding-bottom: 15px;
+        border-radius: 10px;
+        display: inline-block;
+        /* max-width: 30rem; */
+        position: relative;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .card img{
+        width: 100%;
+        max-width: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 10px 10px 0px 0px;
+        height: 250px;
+    }
+    
+    .blur-div{
+        background-color: transparent;
+        position: absolute;
+        width: 100%;
+        height: 250px;
+        top: 0px;
+        border-radius: 10px 10px 0 0;
+        z-index: 10;
+    }
+    
+    .line-divisor{
+        width: 100%;
+        height: 3px;
+        background-color: #93c5fd;
+        margin-top: 0;
+    }
+
+    .card-body{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .card h3{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 20px;
+    }
+    
+    .card a{
+        text-decoration: none;
+        color: #93c5fd; /* Azul claro */
+    }
+    
+    .card p{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 15px;
+        text-align:left;
+    }
+    
+    .tec-used{
+        position: absolute;
+        top: 100px;
+        display: flex;
+        width: 200px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        visibility: hidden;
+    }
+    
+    .tec-used-visible{
+        visibility: visible;
+    }
+    
+    .tec-used i{
+        font-size: 30px;
+    }
+    
+    .tec-used img{
+        width: 30px;
+        height: auto;
+    }
+}
+
+@media (max-width: 680px){
+   /* .card{
+        padding-bottom: 0px;
+        margin-bottom: 20px;
+        border-radius: 0px;
+        display: flex;
+        max-width: 100%;
+        position: relative;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+    
+    .card img{
+        width: 200px;
+        height: 250px;
+        border-radius: 0px;
+    }
+    
+    .blur-div{
+        position: absolute;
+        width: 200px;
+        height: 250px;
+        top: 0px;
+        border-radius: 0;
+        z-index: 10;
+    }
+    
+    .line-divisor{
+        width: 3px;
+        height: 250px;
+        position: absolute;
+        top: 4px;
+        left: 200px;
+        background-color: #93c5fd;
+        margin-top: -4px;
+    }
+    
+    .card h3{
+        position: absolute;
+        left: 210px;
+        top: 0px;
+        font-size: 15px;
+    }
+    
+    .card p{
+        position: absolute;
+        left: 210px;
+        top: 70px;
+        margin-top: 20px;
+        font-size: 12px;
+    }
+
+    .card a{
+        position: absolute;
+        left: 210px;
+        top: 220px;
+    }
+    
+    .tec-used{
+        position: absolute;
+        top: 100px;
+        display: flex;
+        width: 200px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        visibility: hidden;
+    }
+    
+    .tec-used-visible{
+        visibility: visible;
+    }
+    
+    .tec-used i{
+        font-size: 30px;
+    }
+    
+    .tec-used img{
+        width: 30px;
+        height: auto;
+    } */
+}
