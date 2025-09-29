@@ -73,7 +73,7 @@ const observer = new IntersectionObserver((entradas) => {
     }
   });
 }, {
-  threshold: 0.15 // Se activa cuando al menos 15% del elemento es visible
+  threshold: [0, 0.15, 0.5]  // Se activa cuando al menos 15% del elemento es visible
 });
 
 elementosAnimados.forEach(el => observer.observe(el));
